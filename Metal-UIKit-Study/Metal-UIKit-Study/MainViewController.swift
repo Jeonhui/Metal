@@ -8,6 +8,10 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    let mtkViewController: MTKBaseViewController = {
+        let mtkVC = MTKBaseViewController()
+        return mtkVC
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +25,28 @@ class MainViewController: UIViewController {
         self.addChild(mtkViewController)
         
         let metalAdder = MetalAdder()
-        metalAdder.prepareData(firstArray: [1,2,3],
-                               secondArray: [4,5,6],
-                               arrayLength: 3)
+        metalAdder.prepareData(firstArray: [1,2,3], secondArray: [4,5,6], arrayLength: 3)
         metalAdder.sendAddCommand()
     }
     
     private func addSubviews() {
-
+        let subviews: [UIView] = [mtkViewController.view]
+        subviews.forEach { subview in
+            view.addSubview(subview)
+        }
     }
     
     private func makeConstraints() {
-
+        mtkViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        let constraints: [NSLayoutConstraint] = [
+            mtkViewController.view.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            mtkViewController.view.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            mtkViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mtkViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mtkViewController.view.heightAnchor.constraint(equalToConstant: 300)
+        ]
+        
+        NSLayoutConstraint.activate(constraints)
     }
 }

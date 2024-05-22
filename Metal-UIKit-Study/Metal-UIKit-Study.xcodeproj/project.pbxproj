@@ -15,6 +15,10 @@
 		A55561E92BFC7256009863B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55561E82BFC7256009863B3 /* MainViewController.swift */; };
 		A55561EB2BFC786B009863B3 /* add_arrays.metal in Sources */ = {isa = PBXBuildFile; fileRef = A55561EA2BFC786B009863B3 /* add_arrays.metal */; };
 		A55561ED2BFC79F3009863B3 /* MTKAdder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55561EC2BFC79F3009863B3 /* MTKAdder.swift */; };
+		A55561EF2BFCE484009863B3 /* triangle.metal in Sources */ = {isa = PBXBuildFile; fileRef = A55561EE2BFCE484009863B3 /* triangle.metal */; };
+		A55561F12BFCF663009863B3 /* MTKRectangleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55561F02BFCF663009863B3 /* MTKRectangleViewController.swift */; };
+		A55561F32BFCF873009863B3 /* Renderer.metal in Sources */ = {isa = PBXBuildFile; fileRef = A55561F22BFCF873009863B3 /* Renderer.metal */; };
+		A55561F52BFD05DF009863B3 /* MTKBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55561F42BFD05DF009863B3 /* MTKBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		A55561E82BFC7256009863B3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A55561EA2BFC786B009863B3 /* add_arrays.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = add_arrays.metal; sourceTree = "<group>"; };
 		A55561EC2BFC79F3009863B3 /* MTKAdder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKAdder.swift; sourceTree = "<group>"; };
+		A55561EE2BFCE484009863B3 /* triangle.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = triangle.metal; sourceTree = "<group>"; };
+		A55561F02BFCF663009863B3 /* MTKRectangleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKRectangleViewController.swift; sourceTree = "<group>"; };
+		A55561F22BFCF873009863B3 /* Renderer.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Renderer.metal; sourceTree = "<group>"; };
+		A55561F42BFD05DF009863B3 /* MTKBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +71,12 @@
 				A55561E62BFC7104009863B3 /* App */,
 				A55561E82BFC7256009863B3 /* MainViewController.swift */,
 				A55561D62BFC6C72009863B3 /* MTKViewController.swift */,
+				A55561F42BFD05DF009863B3 /* MTKBaseViewController.swift */,
 				A55561EC2BFC79F3009863B3 /* MTKAdder.swift */,
+				A55561F02BFCF663009863B3 /* MTKRectangleViewController.swift */,
 				A55561EA2BFC786B009863B3 /* add_arrays.metal */,
+				A55561EE2BFCE484009863B3 /* triangle.metal */,
+				A55561F22BFCF873009863B3 /* Renderer.metal */,
 				A55561E72BFC710C009863B3 /* Resources */,
 			);
 			path = "Metal-UIKit-Study";
@@ -159,11 +171,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55561EF2BFCE484009863B3 /* triangle.metal in Sources */,
 				A55561D72BFC6C72009863B3 /* MTKViewController.swift in Sources */,
 				A55561D32BFC6C72009863B3 /* AppDelegate.swift in Sources */,
 				A55561D52BFC6C72009863B3 /* SceneDelegate.swift in Sources */,
 				A55561E92BFC7256009863B3 /* MainViewController.swift in Sources */,
 				A55561EB2BFC786B009863B3 /* add_arrays.metal in Sources */,
+				A55561F12BFCF663009863B3 /* MTKRectangleViewController.swift in Sources */,
+				A55561F32BFCF873009863B3 /* Renderer.metal in Sources */,
+				A55561F52BFD05DF009863B3 /* MTKBaseViewController.swift in Sources */,
 				A55561ED2BFC79F3009863B3 /* MTKAdder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
