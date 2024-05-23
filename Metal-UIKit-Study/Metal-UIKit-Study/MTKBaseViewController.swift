@@ -109,7 +109,7 @@ class MTKBaseViewController: UIViewController {
                                              length: vertexDataSize,
                                              options: [])
         
-        let colorDataSize = vertexData.count * MemoryLayout.size(ofValue: colorData[0])
+        let colorDataSize = colorData.count * MemoryLayout.size(ofValue: colorData[0])
         let colorBuffer = device.makeBuffer(bytes: colorData,
                                             length: colorDataSize,
                                             options: [])
@@ -117,7 +117,10 @@ class MTKBaseViewController: UIViewController {
         renderEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
         renderEncoder.setVertexBuffer(colorBuffer, offset: 0, index: 1)
         
-        renderEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3, instanceCount: 1)
+        renderEncoder.drawPrimitives(type: .triangle,
+                                     vertexStart: 0,
+                                     vertexCount: 3,
+                                     instanceCount: 1)
         renderEncoder.endEncoding()
         
         // commit
