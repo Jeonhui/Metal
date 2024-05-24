@@ -9,25 +9,47 @@
 /* Begin PBXBuildFile section */
 		A58317B12BFECE5A006B7BEA /* MTLDevice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58317B02BFECE5A006B7BEA /* MTLDevice+.swift */; };
 		A58317B52BFEE0F5006B7BEA /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58317B42BFEE0F5006B7BEA /* Vertex.swift */; };
+		A58317BB2BFF00DD006B7BEA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58317BA2BFF00DD006B7BEA /* MainViewController.swift */; };
+		A58317BF2BFF2B23006B7BEA /* TriangleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = A58317BE2BFF2B23006B7BEA /* TriangleShader.metal */; };
+		A58317C32BFF339F006B7BEA /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = A58317C22BFF339F006B7BEA /* cat.png */; };
+		A58317C52BFF36C1006B7BEA /* cat1.png in Resources */ = {isa = PBXBuildFile; fileRef = A58317C42BFF36C1006B7BEA /* cat1.png */; };
+		A58317C82BFF3FE3006B7BEA /* Texture2DVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58317C72BFF3FE3006B7BEA /* Texture2DVertex.swift */; };
+		A58317CA2BFF48DE006B7BEA /* VertexPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58317C92BFF48DE006B7BEA /* VertexPosition.swift */; };
+		A58317CC2BFF4CBE006B7BEA /* Texture2DCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58317CB2BFF4CBE006B7BEA /* Texture2DCoordinator.swift */; };
+		A5A09BFB2BFF9D5D000741F3 /* MTKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A09BFA2BFF9D5D000741F3 /* MTKViewController.swift */; };
+		A5A09BFD2BFF9DDB000741F3 /* QuadShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = A5A09BFC2BFF9DDB000741F3 /* QuadShader.metal */; };
+		A5A09BFF2BFFA049000741F3 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A09BFE2BFFA049000741F3 /* Math.swift */; };
+		A5A09C022BFFA085000741F3 /* MTK3DRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A09C012BFFA085000741F3 /* MTK3DRenderer.swift */; };
+		A5A09C042BFFA0B0000741F3 /* MTKTextureRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A09C032BFFA0B0000741F3 /* MTKTextureRenderer.swift */; };
 		A5D14F9C2BFE09D0006E1BE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D14F9B2BFE09D0006E1BE6 /* AppDelegate.swift */; };
 		A5D14F9E2BFE09D0006E1BE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D14F9D2BFE09D0006E1BE6 /* SceneDelegate.swift */; };
-		A5D14FA02BFE09D0006E1BE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D14F9F2BFE09D0006E1BE6 /* ViewController.swift */; };
 		A5D14FA52BFE09D2006E1BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D14FA42BFE09D2006E1BE6 /* Assets.xcassets */; };
 		A5D14FA82BFE09D2006E1BE6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A5D14FA72BFE09D2006E1BE6 /* Base */; };
-		A5D14FB22BFE0A8F006E1BE6 /* TriangleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = A5D14FB12BFE0A8F006E1BE6 /* TriangleShader.metal */; };
+		A5D14FB22BFE0A8F006E1BE6 /* TriangleTextureSquare.metal in Sources */ = {isa = PBXBuildFile; fileRef = A5D14FB12BFE0A8F006E1BE6 /* TriangleTextureSquare.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A58317B02BFECE5A006B7BEA /* MTLDevice+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MTLDevice+.swift"; sourceTree = "<group>"; };
 		A58317B42BFEE0F5006B7BEA /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		A58317BA2BFF00DD006B7BEA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A58317BE2BFF2B23006B7BEA /* TriangleShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TriangleShader.metal; sourceTree = "<group>"; };
+		A58317C22BFF339F006B7BEA /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
+		A58317C42BFF36C1006B7BEA /* cat1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat1.png; sourceTree = "<group>"; };
+		A58317C72BFF3FE3006B7BEA /* Texture2DVertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texture2DVertex.swift; sourceTree = "<group>"; };
+		A58317C92BFF48DE006B7BEA /* VertexPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexPosition.swift; sourceTree = "<group>"; };
+		A58317CB2BFF4CBE006B7BEA /* Texture2DCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texture2DCoordinator.swift; sourceTree = "<group>"; };
+		A5A09BFA2BFF9D5D000741F3 /* MTKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKViewController.swift; sourceTree = "<group>"; };
+		A5A09BFC2BFF9DDB000741F3 /* QuadShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = QuadShader.metal; sourceTree = "<group>"; };
+		A5A09BFE2BFFA049000741F3 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		A5A09C012BFFA085000741F3 /* MTK3DRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTK3DRenderer.swift; sourceTree = "<group>"; };
+		A5A09C032BFFA0B0000741F3 /* MTKTextureRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKTextureRenderer.swift; sourceTree = "<group>"; };
 		A5D14F982BFE09D0006E1BE6 /* Metal-Cube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metal-Cube.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D14F9B2BFE09D0006E1BE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5D14F9D2BFE09D0006E1BE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5D14F9F2BFE09D0006E1BE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A5D14FA42BFE09D2006E1BE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5D14FA72BFE09D2006E1BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5D14FA92BFE09D2006E1BE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5D14FB12BFE0A8F006E1BE6 /* TriangleShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TriangleShader.metal; sourceTree = "<group>"; };
+		A5D14FB12BFE0A8F006E1BE6 /* TriangleTextureSquare.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TriangleTextureSquare.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,15 +74,39 @@
 		A58317B32BFECF17006B7BEA /* Shader */ = {
 			isa = PBXGroup;
 			children = (
-				A5D14FB12BFE0A8F006E1BE6 /* TriangleShader.metal */,
+				A5D14FB12BFE0A8F006E1BE6 /* TriangleTextureSquare.metal */,
+				A58317BE2BFF2B23006B7BEA /* TriangleShader.metal */,
+				A5A09BFC2BFF9DDB000741F3 /* QuadShader.metal */,
 			);
 			path = Shader;
+			sourceTree = "<group>";
+		};
+		A58317C62BFF3919006B7BEA /* Vertex */ = {
+			isa = PBXGroup;
+			children = (
+				A58317C92BFF48DE006B7BEA /* VertexPosition.swift */,
+				A58317C72BFF3FE3006B7BEA /* Texture2DVertex.swift */,
+				A58317B42BFEE0F5006B7BEA /* Vertex.swift */,
+				A58317CB2BFF4CBE006B7BEA /* Texture2DCoordinator.swift */,
+			);
+			path = Vertex;
+			sourceTree = "<group>";
+		};
+		A5A09C002BFFA073000741F3 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				A5A09C032BFFA0B0000741F3 /* MTKTextureRenderer.swift */,
+				A5A09C012BFFA085000741F3 /* MTK3DRenderer.swift */,
+			);
+			path = Renderer;
 			sourceTree = "<group>";
 		};
 		A5D14F8F2BFE09D0006E1BE6 = {
 			isa = PBXGroup;
 			children = (
 				A5D14F9A2BFE09D0006E1BE6 /* Metal-Cube */,
+				A58317C22BFF339F006B7BEA /* cat.png */,
+				A58317C42BFF36C1006B7BEA /* cat1.png */,
 				A5D14F992BFE09D0006E1BE6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,9 +122,12 @@
 		A5D14F9A2BFE09D0006E1BE6 /* Metal-Cube */ = {
 			isa = PBXGroup;
 			children = (
+				A58317C62BFF3919006B7BEA /* Vertex */,
 				A5D14FAF2BFE09E4006E1BE6 /* App */,
-				A5D14F9F2BFE09D0006E1BE6 /* ViewController.swift */,
-				A58317B42BFEE0F5006B7BEA /* Vertex.swift */,
+				A58317BA2BFF00DD006B7BEA /* MainViewController.swift */,
+				A5A09BFA2BFF9D5D000741F3 /* MTKViewController.swift */,
+				A5A09BFE2BFFA049000741F3 /* Math.swift */,
+				A5A09C002BFFA073000741F3 /* Renderer */,
 				A58317B32BFECF17006B7BEA /* Shader */,
 				A58317B22BFECE60006B7BEA /* Extensions */,
 				A5D14FB02BFE09EE006E1BE6 /* Resources */,
@@ -163,6 +212,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A58317C52BFF36C1006B7BEA /* cat1.png in Resources */,
+				A58317C32BFF339F006B7BEA /* cat.png in Resources */,
 				A5D14FA52BFE09D2006E1BE6 /* Assets.xcassets in Resources */,
 				A5D14FA82BFE09D2006E1BE6 /* Base in Resources */,
 			);
@@ -175,11 +226,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A58317CC2BFF4CBE006B7BEA /* Texture2DCoordinator.swift in Sources */,
+				A58317CA2BFF48DE006B7BEA /* VertexPosition.swift in Sources */,
+				A58317C82BFF3FE3006B7BEA /* Texture2DVertex.swift in Sources */,
+				A5A09BFF2BFFA049000741F3 /* Math.swift in Sources */,
+				A58317BB2BFF00DD006B7BEA /* MainViewController.swift in Sources */,
 				A58317B12BFECE5A006B7BEA /* MTLDevice+.swift in Sources */,
-				A5D14FA02BFE09D0006E1BE6 /* ViewController.swift in Sources */,
+				A5A09C042BFFA0B0000741F3 /* MTKTextureRenderer.swift in Sources */,
 				A5D14F9C2BFE09D0006E1BE6 /* AppDelegate.swift in Sources */,
-				A5D14FB22BFE0A8F006E1BE6 /* TriangleShader.metal in Sources */,
+				A5D14FB22BFE0A8F006E1BE6 /* TriangleTextureSquare.metal in Sources */,
+				A58317BF2BFF2B23006B7BEA /* TriangleShader.metal in Sources */,
+				A5A09C022BFFA085000741F3 /* MTK3DRenderer.swift in Sources */,
 				A5D14F9E2BFE09D0006E1BE6 /* SceneDelegate.swift in Sources */,
+				A5A09BFB2BFF9D5D000741F3 /* MTKViewController.swift in Sources */,
+				A5A09BFD2BFF9DDB000741F3 /* QuadShader.metal in Sources */,
 				A58317B52BFEE0F5006B7BEA /* Vertex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
