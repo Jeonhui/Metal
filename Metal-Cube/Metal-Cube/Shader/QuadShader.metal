@@ -21,13 +21,15 @@ struct VertexQuadOut {
 
 vertex VertexQuadOut vertexQuadFunction(VertexQuad in [[stage_in]],
                                         // const float2& quadPosition [[buffer(0)]]
-                                        constant float4x4& projectionMatrix [[buffer(0)]],
+                                        // constant float4x4& projectionMatrix [[buffer(0)]],
                                         constant float4x4& modelMatrix [[buffer(1)]]) {
     VertexQuadOut out;
     // out.position = float4(quadPosition + in.position, 0.0, 1.0);
     // out.position = modelMatrix * float4 (in.position, 0.0 , 1.0 );
     // out.position = modelMatrix * in.position;
-    out.position = projectionMatrix * modelMatrix * in.position;
+    
+    out.position = modelMatrix * in.position;
+    // out.position = projectionMatrix * modelMatrix * in.position;
     out.texCoord = in.texCoord;
     return out;
 }

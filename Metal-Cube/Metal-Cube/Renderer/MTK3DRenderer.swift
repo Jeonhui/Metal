@@ -7,6 +7,7 @@
 
 
 import MetalKit
+import simd
 
 class MTK3DRenderer: NSObject {
     weak var view: MTKView!
@@ -103,6 +104,8 @@ class MTK3DRenderer: NSObject {
         view.enableSetNeedsDisplay = true
     }
     
+    
+    // MARK: - Render
     private func render() {
         // Render Passes
         guard let drawable = view.currentDrawable else { return }
@@ -134,42 +137,59 @@ class MTK3DRenderer: NSObject {
                                       offset: 0,
                                       index: 30)
         
-        var projectionMatrix = createPerspectiveMatrix(fov: toRadians(from: 45.0),
+        
+        // Projection Matrix
+        var projectionMatrix = createPerspectiveMatrix(fov: toRadians(from: 0.0),
                                                        aspectRatio: aspectRatio,
-                                                       nearPlane: 0.1,
-                                                       farPlane: 100.0)
+                                                       nearPlane: 0.0,
+                                                       farPlane: 0.0)
         renderEncoder.setVertexBytes(&projectionMatrix,
                                      length: MemoryLayout.stride(ofValue: projectionMatrix),
                                      index: 0)
         
+        
         //Create the view matrix
-        let viewMatrix = createViewMatrix(eyePosition: simd_float3(0.0, 5.0, -5.0), targetPosition: simd_float3(0.0, 0.0, 0.0), upVec: simd_float3(0.0, 1.0, 0.0))
+        // let viewMatrix = createViewMatrix(eyePosition: simd_float3(1, 1, 1),
+        //                                   targetPosition: simd_float3(0.0, 0.0, 0.0),
+        //                                   upVec: simd_float3(0.0, 0.0, 0.0))
 
+        
         //Create the model matrix
+        // Identity matrix - 행렬이나 벡터를 단위 행렬과 곱해도 수정되지 않으므로 일종의 기본 행렬
+        /*
+         [1 0 0]
+         [0 1 0]
+         [0 0 1]
+         */
         var modelMatrix = matrix_identity_float4x4
-        translateMatrix(matrix: &modelMatrix, 
-                        position: simd_float3(0.0, 0.0, 0.0))
-        rotateMatrix3D(matrix: &modelMatrix,
-                       rotation: simd_float3(0.0, toRadians(from: 60.0), 0.0))
-        scaleMatrix(matrix: &modelMatrix, 
-                    scale: simd_float3(1.0, 1.0, 1.0))
+        // translateMatrix(matrix: &modelMatrix, 
+                        // position: simd_float3(0.5, 0.5, 0.0))
+        // rotateMatrix(matrix: &modelMatrix, angle: toRadians(from: 0.0))
+        // rotateMatrix3D(matrix: &modelMatrix,
+        //                rotation: simd_float3(0.0, toRadians(from: 60.0), 0.0))
+        
+        // scaleMatrix(matrix: &modelMatrix,
+        //             scale: simd_float3(1.0, 1.0, 1.0))
 
-        var modelViewMatrix = viewMatrix * modelMatrix
+        // var modelViewMatrix = viewMatrix * modelMatrix
+        var modelViewMatrix = modelMatrix
+        
+        
+        // setVertexBytes: 데이터를 Shaderd에 직접 upload, 일반적으로 2KB 미만 데이터를 사용할 때만 사용 (GPU 메모리에 복사해야 하기 때문)
         renderEncoder.setVertexBytes(&modelViewMatrix,
                                      length: MemoryLayout.stride(ofValue: modelViewMatrix),
                                      index: 1)
         
         renderEncoder.setFragmentTexture(textures["cat"], index: 0)
         
+        // MARK: - Shader position calculation result
+        
+        
         renderEncoder.drawIndexedPrimitives(type: .triangle,
                                             indexCount: 6,
                                             indexType: .uint16,
                                             indexBuffer: indexBuffer,
                                             indexBufferOffset: 0)
-        
-        // renderEncoder.drawPrimitives(type: .triangle,
-        //                              vertexStart: 0,
-        //                              vertexCount: 6)
         
         renderEncoder.endEncoding()
         commandBuffer.present(drawable)
